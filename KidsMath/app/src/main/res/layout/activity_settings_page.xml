@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="240dp"
+            android:layout_height="80dp"
+            android:autofillHints="hints hints"
+            android:hint="@string/enter_your_name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/ageEditText"
+            android:layout_width="240dp"
+            android:layout_height="80dp"
+            android:autofillHints="hints hints"
+            android:layout_below="@id/nameEditText"
+            android:hint="@string/enter_your_age"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/questionGuideText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints="questionGuide"
+            android:layout_below="@id/ageEditText"
+            android:text="@string/questionGuide"
+            android:textSize="18sp"
+            android:paddingTop="10dp"
+            />
+
+        <RadioGroup
+            android:id="@+id/levelRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionGuideText"
+            android:layout_marginTop="16dp">
+
+            <RadioButton
+                android:id="@+id/beginnerRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/beginner" />
+
+            <RadioButton
+                android:id="@+id/advancedRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/advanced" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/startGameButton"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/levelRadioGroup"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="@string/start_game" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="@string/back_set"
+            android:layout_below="@id/startGameButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"/>
+
+    </RelativeLayout>
+</layout>

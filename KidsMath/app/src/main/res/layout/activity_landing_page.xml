@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/welcomeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/welcome_to_math_game"
+            android:textAlignment="center"
+            android:textColor="#131870"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/welcomeImageView"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_below="@id/welcomeTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/welcome_message"
+            android:src="@drawable/mathgame" />
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/welcomeImageView"
+            android:text="@string/play"
+            android:layout_marginTop="30dp"
+            android:textSize="26sp"
+            />
+
+        <!-- Container for the buttons arranged in two rows -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/playButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+
+            <!-- Second row of buttons -->
+            <LinearLayout
+                android:id="@+id/ScoreButton"
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/topScoreButton"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="140dp"
+                    android:layout_height="60dp"
+                    android:textSize="18sp"
+                    android:text="@string/top_score" />
+
+                <Button
+                    android:id="@+id/allScoreButton"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="140dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="20dp"
+                    android:textSize="18sp"
+                    android:text="@string/scores" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/myCatButton"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:text="@string/my_cat" />
+
+        <ImageView
+            android:id="@+id/catImageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/catMessageTextView"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/cat_image"
+            android:src="@drawable/cut_notification_button" />
+
+        <TextView
+            android:id="@+id/catMessageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/myCatButton"
+            android:layout_marginBottom="0dp"
+            android:text="@string/cat_message"
+            android:textAlignment="center"
+            android:textColor="#ED15155C"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+</layout>
